@@ -1,0 +1,63 @@
+package practice.hashmap;
+import java.util.*;
+import java.io.*;
+
+public class HackerRank
+{
+    public static void main(String []args)
+    {
+        HashMap<String,Long> phoneBook= new HashMap<String,Long>();
+        ArrayList<String> names= new ArrayList<String>();
+        ArrayList<Long> numbers= new ArrayList<Long>();
+        String [] findNames;
+        Random r= new Random();
+
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number of records to be added in the phonebook");
+       int n= sc.nextInt();
+       int variable=0;
+       while(variable<n)
+       {
+    	   System.out.println("Enter the name of a person to be added");
+           String name=sc.next();
+          System.out.println("Enter the contact number");
+           Long number=sc.nextLong();
+           names.add(name);
+           numbers.add(number);
+           phoneBook.put(names.get(0), numbers.get(0));
+           numbers.clear();
+           names.clear();
+          
+           variable++;
+
+       }
+       int random=r.nextInt(phoneBook.size())+1;
+       System.out.println(random);
+       System.out.println("Enter "+random+" names");
+       sc.nextLine();
+       for(int i=0;i<random;i++)
+       {
+    	   findNames[i]= sc.nextLine();
+       
+       }
+       
+      
+       
+    	   if(phoneBook.containsKey(findNames)) {
+    		   System.out.println(findNames+"="+phoneBook.get(findNames));
+    		   continue;
+    	   }
+    	   else {
+    		   System.out.println("Not Found");
+    		   continue;
+    	   }
+     	   
+             
+    } 
+       
+    	   
+        }
+      }
+      }
+      }
+     
